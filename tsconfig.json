@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "rootDir": "./",
+    "outDir": "./build",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "noImplicitAny": false,
+    "lib": ["es2019", "es2020", "DOM"],
+    "baseUrl": ".",
+    "paths": {
+      "@api/*": [
+        "api/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@controllers/*": [
+        "controllers/*"
+      ],
+      "@services/*": [
+        "services/*"
+      ],
+      "@interfaces/*": [
+        "interfaces/*"
+      ],
+      "@libraries/*": [
+        "universe/libraries/*"
+      ],
+      "@middlewares/*": [
+        "universe/middlewares/*"
+      ],
+      "@loaders/*": [
+        "universe/loaders/*"
+      ],
+      "@errors/*": [
+        "universe/errors/*"
+      ],
+      "@utils/*": [
+        "universe/utils/*"
+      ],
+      "@universe/*": [
+        "universe/*"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "dist"],
+  "ts-node": {
+    "swc": true
+  }
+}

@@ -6,7 +6,7 @@ import { logger } from '@libraries/logger';
 
 export const FrameworkLoader = ({ app }: {
     app: express.Application
-}): void => {
+}) => {
     app.enable("trust proxy");
 
     app.all("*", (req, res, next) => {
@@ -36,4 +36,6 @@ export const FrameworkLoader = ({ app }: {
             limit: '100mb'
         })
     );
+
+    return app;
 }

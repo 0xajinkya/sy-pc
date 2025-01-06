@@ -4,13 +4,17 @@ import { FdRouter } from "@api/fd";
 import { PreApprovedLoansRouter } from "@api/pre-approved-loans";
 import { RdRouter } from "@api/rd";
 import { NotFoundError } from "@errors/not-found";
+import { logger } from "@libraries/logger";
 import { AppLoader } from "@loaders/app";
 import { ErrorHandler } from "@middlewares/error-handler";
 import express from "express";
 
 export const Server = async() => {
     const app = express();
-    AppLoader({ app });
+    AppLoader({ app }).catch((err) => {
+        logger.instance.error(err);
+        process.exit(1);
+    });
     
     app.get("/", (req, res) => {
         res.send("Hello World");

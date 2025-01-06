@@ -63,9 +63,11 @@ const SendSmsOtp = async (data: ISendSmsOtp) => {
         throw new PlatformError("InvalidInput");
     }
     return {
-        status: 201,
+        status: true,
         content: {
-            message: "The otp is sent successfully."
+            data: {
+                message: "The otp is sent successfully."
+            }
         }
     }
 };
@@ -87,7 +89,7 @@ const VerifySmsOtp = async (data: IVerifyOtp) => {
     const token = createToken(token_payload);
 
     return {
-        status: 200,
+        status: true,
         content: {
             data: {
                 message: "The otp has been validated successfully.",

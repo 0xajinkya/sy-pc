@@ -7,6 +7,6 @@ export const AppLoader = async ({
     app?: express.Application
 }) => {
     if (app) {
-        FrameworkLoader({ app });
+        app = FrameworkLoader({ app });
     }
 }

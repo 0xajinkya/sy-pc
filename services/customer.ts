@@ -1,6 +1,6 @@
 const GetCustomerAccounts = async (customer_id: string) => {
     return {
-        status: 200,
+        status: true,
         content: {
             data: [
                 {
@@ -29,7 +29,7 @@ const GetCustomerAccounts = async (customer_id: string) => {
 
 const GetCustomerAccountStatements = async (customer_id: string, account_id: string) => {
     return {
-        status: 200,
+        status: true,
         content: {
             data: [
                 { '_id': 1, 'txn_code': 'UPI/546789/Ajay/CRD', 'amount': 70000, 'timestamp': 1734700218000 },

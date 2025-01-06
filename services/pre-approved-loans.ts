@@ -3,9 +3,9 @@ import type { Request, Response } from "express";
 
 const Validator = async (customer_id: string, validation_field: string) => {
     const data = {
-        status: 200,
-        data: {
-            content: {
+        status: true,
+        content: {
+            data: {
                 is_valid: true
             }
         }
@@ -15,7 +15,7 @@ const Validator = async (customer_id: string, validation_field: string) => {
 
 const GetProductTypes = (customer_id: string) => {
     return {
-        status: 200,
+        status: true,
         content: {
             data: [
                 { 'loan_type': 'Loan Against Property', 'loan_tenure': '180 Months', 'loan_amount': 'Upto Rs. 5 crores' },

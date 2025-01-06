@@ -1,6 +1,6 @@
 const GetProductTypes = async (customer_id: string) => {
     return {
-        status: 200,
+        status: true,
         content: {
             data: [
                 { 'type': 'Standard Fixed Deposit', 'tenure': '180 Months', 'rate': '6.5% p.a.' },

@@ -1,4 +1,3 @@
-import 'express-async-errors';
 import express from 'express';
 import cookieparser from 'cookie-parser';
 import { envconfig } from '@libraries/envconfig';

@@ -1,3 +1,4 @@
+import  "express-async-errors";
 import { AuthRouter } from "@api/auth";
 import { CustomerRouter } from "@api/customer";
 import { FdRouter } from "@api/fd";
